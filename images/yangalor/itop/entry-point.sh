@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Start the first process
+# Start the httpd process
 httpd -C "ServerName localhost"
 status=$?
 if [ $status -ne 0 ]; then
@@ -8,7 +8,7 @@ if [ $status -ne 0 ]; then
   exit $status
 fi
 
-# Start the second process
+# Start the crond process
 crond
 status=$?
 if [ $status -ne 0 ]; then

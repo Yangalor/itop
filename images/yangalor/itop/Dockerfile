@@ -37,6 +37,8 @@ RUN chown apache.apache /var/www/html && \
     chown apache.apache -R /var/www/html/log && \
     chown apache.apache -R /var/www/html/data
 
+RUN echo "*/5 * * * * root /usr/bin/php /var/www/html/webservices/cron.php --param_file=/etc/itop/params >>/var/log/itop-cron.log 2>&1" >> /etc/crontab
+
 ADD ./entry-point.sh /
 
 EXPOSE 80 443

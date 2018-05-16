@@ -1,0 +1,7 @@
+# Authentication
+auth_user = admin
+auth_pwd = admin
+ 
+# My web service
+size_min = 20 # Megabytes
+time_limit = 40 # Minutes
