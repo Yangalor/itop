@@ -3,7 +3,7 @@
 ITOP_HOME=""
 CA_HOME="$ITOP_HOME"
 
-docker	run --rm -d --link itop-db -p 80:80 -p 443:443 \
+docker	run -d --link itop-db -p 80:80 -p 443:443 \
 	-e TZ=Europe/Moscow \
 	-v "$ITOP_HOME"/cfg/params:/etc/itop/params \
 	-v "$ITOP_HOME"/cfg/ssl.conf:/etc/httpd/conf.d/ssl.conf \
